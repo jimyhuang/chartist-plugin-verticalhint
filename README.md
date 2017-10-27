@@ -1,7 +1,6 @@
 # Vertical Hint plugin for Chartist.js
 
-This plugin inspired by https://github.com/tmmdata/chartist-plugin-tooltip
-When mouse over the horizontal label, it will show all values of that column in the tip.
+This plugin inspired by [chartist tooltip plugin](https://github.com/tmmdata/chartist-plugin-tooltip). The difference is when mouseover the horizontal label, it will show all values of that column in the tip.
 
 Please visit http://gionkunz.github.io/chartist-js/plugins.html for more information.
 
