@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>chartist-plugin-verticalhint demo</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" href="//raw.githubusercontent.com/jimyhuang/chartist-plugin-verticalhint/master/chartist-plugin-verticalhint.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="//raw.githubusercontent.com/jimyhuang/chartist-plugin-verticalhint/master/chartist-plugin-verticalhint.js"></script>
+  </head>
+  <body>
+
+  <div class="ct-chart ct-perfect-fourth" style="width: 100vw; height: 50vh;"></div>
+
+<script>
+var chart = new Chartist.Line('.ct-chart', {
+  labels: ['2011', '2012', '2013', '2014', '2015', '2016'],
+  series: [
+    [
+      {meta: 'description', value: 1},
+      {meta: 'description', value: 5},
+      {meta: 'description', value: 3},
+      {meta: 'description', value: 3},
+      {meta: 'description', value: 3},
+      {meta: 'description', value: 3}
+    ],
+    [
+      2, 4, 2, 2, 4, 2
+    ]
+  ],
+}, {
+  plugins: [
+    Chartist.plugins.verticalhint({
+      valuePrefix: 'USD$',
+      valueSuffix: '.00',
+      customSelector: '',
+      seriesLabel:[
+        'Google',
+        'Apple',
+      ],
+    })
+  ]
+});
+</script>
+  </body>
+</html>
