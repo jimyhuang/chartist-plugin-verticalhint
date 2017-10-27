@@ -7,7 +7,7 @@ Please visit http://gionkunz.github.io/chartist-js/plugins.html for more informa
 
 ## Sample usage in Chartist.js
 
-online demo here.
+online demo [here](https://jimyhuang.github.io/chartist-plugin-verticalhint/index.html).
 
 ```js
 var chart = new Chartist.Line('.ct-chart', {
