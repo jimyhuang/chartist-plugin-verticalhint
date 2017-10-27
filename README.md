@@ -9,6 +9,8 @@ Please visit http://gionkunz.github.io/chartist-js/plugins.html for more informa
 
 online demo [here](https://jimyhuang.github.io/chartist-plugin-verticalhint/index.html).
 
+![chartist plugin verticalhint screenshot](https://jimyhuang.github.io/chartist-plugin-verticalhint/chartist-plugin-verticalhint.png)
+
 ```js
 var chart = new Chartist.Line('.ct-chart', {
   labels: ['2011', '2012', '2013', '2014', '2015', '2016'],
