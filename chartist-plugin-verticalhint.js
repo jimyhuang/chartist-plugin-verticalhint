@@ -118,7 +118,12 @@
             $verticalhint.innerHTML = verticalhintText;
             padding = 10;
             position = setPosition(event, width, height+20);
-            $verticalhint.style.left = position.x+width/2+wid/2 + padding + 'px';
+            if (chart instanceof Chartist.Bar) {
+              $verticalhint.style.left = position.x+wid/2 + padding + 'px';
+            }
+            else{
+              $verticalhint.style.left = position.x+width/2+wid/2 + padding + 'px';
+            }
             $verticalhint.style.top = position.y + 'px';
 
 
