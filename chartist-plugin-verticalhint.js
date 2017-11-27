@@ -101,7 +101,13 @@
 
           if(verticalhintText) {
             var wid, hei, position, padding;
-            wid = (event.target.offsetParent.attributes.width.value / 3);
+
+            if (chart instanceof Chartist.Bar) {
+              wid = event.target.offsetParent.attributes.width.value;
+            }
+            else {
+              wid = (event.target.offsetParent.attributes.width.value / 3);
+            }
             hei = $grid.getBBox().height;
             position = setPosition(event, wid, hei+5);
             $verticalhintHighlight.style.width = wid + 'px';
@@ -174,7 +180,12 @@
         }
 
         function setPosition(event, width, height) {
-          var offsetX = - width / 2 + options.verticalhintOffset.x
+          if (chart instanceof Chartist.Bar) {
+            var offsetX = options.verticalhintOffset.x
+          }
+          else {
+            var offsetX = - width / 2 + options.verticalhintOffset.x
+          }
           var offsetY = - height + options.verticalhintOffset.y;
           var x = parseInt(event.target.offsetParent.attributes.x.value);
           var y = parseInt(event.target.offsetParent.attributes.y.value);
