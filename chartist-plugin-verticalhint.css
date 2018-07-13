@@ -5,9 +5,10 @@
   min-width: 5em;
   padding: .5em;
   box-shadow: 1px 0px 4px black;
-  background: #b4eded;
+  background: #FFFFFF;
   color: #453D3F;
   font-weight: 700;
+  font-size: 0.85em;
   text-align: center;
   pointer-events: none;
   z-index: 1;
@@ -24,7 +25,7 @@
     height: 0;
     margin-top: -15px;
     border: 15px solid transparent;
-    border-right-color: #b4eded; }
+    border-right-color: #FFFFFF; }
   .chartist-verticalhint.verticalhint-show {
     opacity: .8; }
 

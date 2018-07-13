@@ -93,14 +93,8 @@
           if (index === -1) {
             return;
           }
-          var value = 0;
           var verticalhintText = '';
           var verticalhintText = addContent(index);
-
-          if (value) {
-            value = '<span class="chartist-verticalhint-value">' + value + '</span>';
-            verticalhintText += value;
-          }
 
           if(verticalhintText) {
             var wid, hei, position, padding;
@@ -129,7 +123,6 @@
             }
             $verticalhint.style.top = position.y + 'px';
 
-
             show($verticalhint);
             show($verticalhintHighlight);
 
@@ -150,14 +143,16 @@
             if (series[0].constructor === Array) { // multidimensional
               for (var key in series) {
                 var val = series[key];
-                if (typeof val[idx].value !== 'undefined') {
-                  seriesValue[key] = val[idx].value;
-                  //while zoom plugin is enabled
-                }else if(typeof val[idx] === "object"  && val[idx]['y'] !== undefined){
-                  seriesValue[key]=val[idx]['y'];
-                }
-                else {
-                  seriesValue[key] = val[idx];
+                if (typeof val[idx] !== 'undefined') {
+                  if (typeof val[idx].value !== 'undefined') {
+                    seriesValue[key] = val[idx].value;
+                    //while zoom plugin is enabled
+                  }else if(typeof val[idx] === "object"  && val[idx]['y'] !== undefined){
+                    seriesValue[key]=val[idx]['y'];
+                  }
+                  else {
+                    seriesValue[key] = val[idx];
+                  }
                 }
               }
             }
@@ -188,6 +183,7 @@
               }
             }
           }
+          return '';
         }
 
         function setPosition(event, width, height) {
