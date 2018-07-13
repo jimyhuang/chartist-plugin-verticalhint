@@ -46,7 +46,10 @@
         var $chart = chart.container;
 
         // this apply chartist default class ct-series-[alphabetical] based on index number
-        var classes = Array(26).fill().map((_, i) => String.fromCharCode('a'.charCodeAt(0) + i));
+        var classes = [];
+        for(var i = 0; i < 26; i++) {
+          classes[i] = String.fromCharCode('a'.charCodeAt(0) + i);
+        }
 
         // chart grid labels
         var horizontalLabels = chart.data.labels.map(function(x){ return x.toString();});
