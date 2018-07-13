@@ -152,6 +152,9 @@
                 var val = series[key];
                 if (typeof val[idx].value !== 'undefined') {
                   seriesValue[key] = val[idx].value;
+                  //while zoom plugin is enabled
+                }else if(typeof val[idx] === "object"  && val[idx]['y'] !== undefined){
+                  seriesValue[key]=val[idx]['y'];
                 }
                 else {
                   seriesValue[key] = val[idx];
